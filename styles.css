@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'DynaPuff';
+    text-align: center;
+    scroll-behavior: smooth;
+    color: #000;
+    text-decoration: none;
+    z-index: 10;
+}
+body {
+    background: linear-gradient(to bottom, #3b2d12, #130f06);
+    height: 100vh;
+    min-width: 280px;
+}
+header {
+    background: #5c4c20;
+    padding: 10px;
+}
+header h1, header h3{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-shadow: 0 0 20px #bbb;
+    font-size: 40px;
+}
+header h3 {
+    font-size: 25px;
+}
+.header__parts {
+    width: 100vw;
+    height: 150px;
+    background: #695724;
+    border-radius: 20px;
+    position: fixed;
+    top: -300px;
+    left: 0;
+    transition-property: top;
+    transition-duration: 1s;
+    z-index: 20;
+    box-shadow: 0 0 30px 0 #222;
+}
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    background: #695724;
+    transition-property: left;
+    transition-duration: 1s;
+    left: calc(-100vw + 50px);
+    top: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 30px 0 #222;
+    z-index: 30;
+}
+.nav__div {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    transition-property: background;
+    transition-duration: .5s;
+}
+#nav__img {
+    transition-property: filter;
+    transition-duration: .5s;
+}
+#nav__img:hover {
+    filter: drop-shadow(0 0 20px #ddd);
+}
+.nav__div-options {
+    transition-property: background, text-shadow;
+    transition-duration: 1s;
+}
+.nav__div-options:hover {
+    background: #816830;
+    text-shadow: 0 0 20px #bbb;
+}
+
+footer {
+    background: #222;
+    border-radius: 20px;
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+footer b {
+    font-size: 25px;
+    line-height: 50px;
+    text-shadow: 0 0 20px #bbb;
+}
+.game__play {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 30px;
+    margin-top: 20px;
+    box-shadow: 0 0 30px 0 #111;
+    background: #fff;
+    transition-property: background, width, height;
+    transition-duration: .5s;
+}
+.game__play:hover {
+    width: 175px;
+    height: 40px;
+    background: #aaa;
+}
+#game {
+    background: #816830;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 25px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    padding: 20px;
+}
+#game h2 {
+    margin-bottom: 20px;
+}
+.step {
+    display: inline-block;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+.game__steps {
+    height: 200px;
+    transition-property: height, opacity;
+    transition-duration: 1s;
+}
+#return, #reset, #resetGame3 {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background: #f00;
+    background: url(row2.png);
+    background-size: 75px 75px;
+    margin: auto;
+    transition-property: background;
+    transition-duration: 1s;
+}
+#res, #game4__points {
+    opacity: 0;
+    transition-property: opacity, color;
+    transition-duration: 1s;
+}
+.game2__title {
+    margin-top: 50px;
+}
+.game2__options {
+    width: 260px;
+    height: 50px;
+    background: #816830;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 #111;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition-property: width, height, box-shadow, opacity;
+    transition-duration: 1s;
+    font-size: 20px;
+}
+.game2__options:hover {
+    width: 280px;
+    height: 60px;
+}
+#game2__points {
+    transition-property: opacity;
+    transition-duration: 2s;
+    opacity: 0;
+}
+#reset, #resetGame3 {
+    background: url(row3.png);
+    background-size: 75px 75px;
+    transition-property: opacity;
+    transition-duration: 2s;
+    margin-bottom: 50px;
+}
+.game3__opc {
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+#game3__points {
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}
+#resetGame3 {
+    background: url(row3.png);
+    background-size: 75px 75px;
+    opacity: 1;
+}
+.game__button, .results__button {
+    width: 280px;
+    height: 50px;
+    border-radius: 20px;
+    background: #695724;
+    border: none;
+    font-size: 25px;
+    box-shadow: 0 0 20px 0 #111;
+    transition-property: height, width, box-shadow;
+    transition-duration: 1s;
+}
+.game__button:hover, .results__button:hover {
+    width: 270px;
+    height: 45px;
+    box-shadow: 0 0 20px 0 #555;
+}
+#results {
+    position: fixed;
+    top: 120px;
+    left: -100%;
+    width: 100%;
+    height: 500px;
+    background: #5c4c20;
+    transition-property: left;
+    transition-duration: 1s;
+}
+.game4__letter, .game4__options {
+    width: 45px;
+    height: 45px;
+    background: #5c4c20;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #222;
+    margin-bottom: 100px;
+}
+.game4__options {
+    background: #816830;
+}
+#inf {
+    background: #816830;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 25px;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    padding: 20px;
+}
+.step__title {
+    font-size: 32px;
+    text-shadow: 0 0 30px #221409;
+}
+.inf__p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 30px;
+}
+#aNatron {
+    color: #00f;
+}
+.inf__img {
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 #111;
+}

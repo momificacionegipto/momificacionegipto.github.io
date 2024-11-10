@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>La momificación en Egipto</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="logo.ico">
+        <link rel="stylesheet" href="styles.css">
+        <script src="javascript.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">LA MOMIFICACIÓN EN EGIPTO</h1>
+            <h3>Por Victoria Bodritto y Matías Collino</h3>
+            <nav id="nav">
+                <div class="nav__div" onclick="nav()"><img id="nav__img" src="row.png" width="50px" height="50px"></div>
+                <div class="nav__div-options" onclick="parts(); erase('#game'); show('#inf')"><h2>INFORMACIÓN</h2></div>
+                <div class="nav__div-options" onclick="erase('#inf'); show('#game')"><a href="#title"><h2>JUEGO</h2></a></div>
+            </nav>
+            <div class="header__parts">
+                <div class="nav__div-options"><a href="#step__title1"><h2>La momificación</h2></a></div>
+                <div class="nav__div-options"><a href="#step__title2"><h2>Origen de la momificación</h2></a></div>
+                <div class="nav__div-options"><a href="#step__title3"><h2>Proceso de momificación</h2></a></div>
+                <div class="nav__div-options"><a href="#step__title4"><h2>Vasos canopos</h2></a></div>
+                <div class="nav__div-options"><a href="#step__title5"><h2>Natrón</h2></a></div>
+            </div>
+        </header>
+        <article>
+            <section id="inf" style="display: block">
+                <h2 id="step__title1" class="step__title">La momificación</h2>
+                <p class="inf__p">La práctica de momificar a los muertos comenzó en Egipto en torno al 3500 a.C. La palabra momia viene del latín mumia, que a su vez deriva de la palabra persa mum, que significa "cera", por el aspecto ceroso del cadáver embalsamado. La idea de momificar a los muertos puede que provenga de la buena conservación de los cadáveres en la árida arena del país.</p>
+                <img class="inf__img" src="momificacion.jpg">
+                <h2 id="step__title2" class="step__title">Origen de momificación</h2>
+                <p class="inf__p">Las creencias en la vida de ultratumba fueron partes muy importantes de la vida egipcia. Para la felicidad del espíritu, los egipcios atribuían valor a la conservación del cuerpo o su imagen, de ahí la necesidad de preservar el cadáver mediante el embalsamamiento, difícil proceso que cumplían, por su costo, únicamente las personas acaudaladas.</p>                
+                <h2 id="step__title3" class="step__title">Proceso de momificación</h2>
+                <p class="inf__p">Cuando la persona fallecía su familia la llevaba con los embalsamadores, los cuáles ofrecían tres tipos de servicios dependiendo la posición económica de la familia.</p>
+                <p class="inf__p">El servicio utilizado por los faraones y sus familiares era el más caro, el cuerpo se tendía sobre una mesa y se lavaba, el cerebro se sacaba por las fosas nasales con un gancho de hierro y lo que no se lograba sacar con el gancho se lavaba con químicos.</p>
+                <img class="inf__img" src="paso1.jpg">
+                <p class="inf__p">Después se realizaba un corte en el costado del tórax y se extraía el contenido del abdomen. La cavidad se limpiaba a fondo y se lavaba con vino de palma y después con una infusión de especias molidas. Una vez limpia, se rellenaba con sustancias aromáticas y se volvía a coser.</p>
+                <p class="inf__p">Por último, el cuerpo se cubría con <a id="aNatron" href="#natron">natrón</a> y se lavaba para ser envuelto de la cabeza a los pies con tiras de lino.</p>
+                <img class="inf__img" src="paso2.jpg">
+                <img class="inf__img" src="paso4.jpg">
+                <h2 id="step__title4" class="step__title">Vasos canopos</h2>
+                <p class="inf__p">Recipientes empleados para depositar las vísceras de los difuntos, lavados y embalsamados, para mantener a salvo la imagen unitaria del cuerpo. Estos vasos se introducían en una caja de madera, que durante el cortejo fúnebre era transportada en un trineo.</p>
+                <img class="inf__img" src="vasosCanopes.jpg" style="height: 250px">
+                <h2 id="step__title5" class="step__title">Natrón</h2>
+                <p id="natron"  class="inf__p">El natrón es un agente natural deshidratador que al igual que la arena sirve para secar el cuerpo. Además de secarlo lo deja flexible.</p>
+                <img class="inf__img" src="natron.png">
+                <h2>Para repasar los contenidos:</h2>
+                <a href="#title"><input type="button" value="JUGAR" class="game__play" onclick="erase('#inf'); show('#game')"></a>
+            </section>
+            <section id="game" style="display: none">
+                <h2>TOCA LAS IMÁGENES EN EL ORDEN CORRECTO</h2>
+                <div class="step" id="step5"><img onclick="select(5)" class="game__steps" src="paso5.jpg" id="steps5"></div>
+                <div class="step" id="step1"><img onclick="select(1)" class="game__steps" src="paso1.jpg" id="steps1"></div>
+                <div class="step" id="step4"><img onclick="select(4)" class="game__steps" src="paso4.jpg" id="steps4"></div>
+                <div class="step" id="step2"><img onclick="select(2)" class="game__steps" src="paso2.jpg" id="steps2"></div>
+                <div class="step" id="step3"><img onclick="select(3)" class="game__steps" src="paso3.jpg" id="steps3"></div>
+                <div id="return" onclick="_return()"></div>
+                <h2 id="res"></h2>
+
+                <h2 class="game2__title">RESPONDE LAS SIGUIENTES PREGUNTAS CORRECTAMENTE</h2>
+                <h2 id="game2__question">¿Para qué se usaba en natrón?</h2>
+                <div class="game2__options" id="opc1" onclick="answer(1)">Vendaje del cuerpo</div>            
+                <div class="game2__options" id="opc2" onclick="answer(2)">Secado del cuerpo</div>                  
+                <div class="game2__options" id="opc3" onclick="answer(3)">Ninguna de las anteriores</div>  
+                <h2 id="game2__points">0/3 preguntas respondidas correctamente</h2>  
+                <div id="reset" onclick="resetGame2()"></div>
+
+                <h2>TOCA LA IMAGEN Y LUEGO LA ETAPA A LA QUE HACE REFERENCIA</h2>
+                <div class="step" id="step5"><img onclick="selectImage(3)" class="game__steps" src="paso5.jpg" id="game3__image3"></div>
+                <div class="step" id="step2"><img onclick="selectImage(1)" class="game__steps" src="paso2.jpg" id="game3__image1"></div>
+                <div class="step" id="step4"><img onclick="selectImage(2)" class="game__steps" src="paso3.jpg" id="game3__image2"></div>
+                <h2 onclick="assign(1)" class="game3__opc" id="game3__opc1">DESHIDRATACIÓN</h2>
+                <h2 onclick="assign(3)" class="game3__opc" id="game3__opc3">PROCESO FINALIZADO</h2>
+                <h2 onclick="assign(2)" class="game3__opc" id="game3__opc2">VENDAJE</h2>
+                <h2 id="game3__points">0/3 respuestas correctas</h2>
+                <div id="resetGame3" onclick="resetGame3()"></div>
+
+                <h2>ORDENA LAS LETRAS PARA FORMAR LA PALABRA: ¿QUÉ SUSTANCIA SE USABA PARA SECAR LOS CUERPOS?</h2>
+                <div class="game4__letter"><h2 id="game4__letter1">.</h2></div>
+                <div class="game4__letter"><h2 id="game4__letter2">.</h2></div>
+                <div class="game4__letter"><h2 id="game4__letter3">.</h2></div>
+                <div class="game4__letter"><h2 id="game4__letter4">.</h2></div>
+                <div class="game4__letter"><h2 id="game4__letter5">.</h2></div>
+                <div class="game4__letter"><h2 id="game4__letter6">.</h2></div>
+                <div></div>
+                <div class="game4__options" onclick="letter('A',0)" id="game4__options1"><h2>A</h2></div>
+                <div class="game4__options" onclick="letter('R',1)" id="game4__options2"><h2>R</h2></div>
+                <div class="game4__options" onclick="letter('N',2)" id="game4__options3"><h2>N</h2></div>
+                <div class="game4__options" onclick="letter('N',3)" id="game4__options4"><h2>N</h2></div>
+                <div class="game4__options" onclick="letter('T',4)" id="game4__options5"><h2>T</h2></div>
+                <div class="game4__options" onclick="letter('Ó',5)" id="game4__options6"><h2>Ó</h2></div>
+                <div id="resetGame3" onclick="resetGame4()"></div>
+                <h2 id="game4__points">INCORRECTO</h2>
+                <input type="button" value="VER RESULTADOS" class="game__button" onclick="results()">
+                <div id="results">
+                    <h2>RESULTADOS</h2>
+                    <h2 id="result1">ACTIVIDAD 1: 0</h2>
+                    <h2 id="result2">ACTIVIDAD 2: 0/3</h2>
+                    <h2 id="result3">ACTIVIDAD 3: 0/3</h2>
+                    <h2 id="result4">ACTIVIDAD 4: 0</h2>
+                    <h2 id="result">RESULTADO FINAL: 0</h2>
+                    <input type="button" value="CERRAR" onclick="quit()" class="results__button">
+                </div>
+            </section>
+        </article>
+        <footer><b><a href="https://www.instagram.com/instituto_d.f.sarmiento38/?hl=es" target="_BLANK">IDFS 2024</a></b></footer>
+    </body>
+</html>
